@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+	import 'package:flutter/material.dart';
 
-main() => runApp(const PerguntasApp());
+main() => runApp(PerguntasApp());
 
 class PerguntasApp extends StatelessWidget {
   const PerguntasApp({super.key});
@@ -8,7 +8,12 @@ class PerguntasApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       darkTheme: ThemeData(),
-      home: const Text('ola flutter'),
+      home: Scafffold(
+      appBar(
+       title: Text('Perguntas'),
+   ),
+      body: Text('Ola Flutter')
+    ),
     );
   }
 }
