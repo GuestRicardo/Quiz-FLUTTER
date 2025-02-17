@@ -21,7 +21,15 @@ class PerguntasApp extends StatelessWidget {
        RaisedButton(
          child:Text('Resposta 1'),
           onPressed: null,
-), 
+        ), 
+       RaisedButton(
+         child:Text('Resposta 2'),
+          onPressed: null,
+        ), 
+       RaisedButton(
+         child:Text('Resposta 3'),
+          onPressed: null,
+        ), 
 ],
 ),
     ),
