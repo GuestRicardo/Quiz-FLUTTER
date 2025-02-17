@@ -1,6 +1,9 @@
 	import 'package:flutter/material.dart';
 
 main() => runApp(PerguntasApp());
+  final List<String>perguntas = [
+    'Qual é sua cor favorita',
+    'Qual é seu animal de estimação',
 
 class PerguntasApp extends StatelessWidget {
   const PerguntasApp({super.key});
@@ -12,7 +15,11 @@ class PerguntasApp extends StatelessWidget {
       appBar(
        title: Text('Perguntas'),
    ),
-      body: Text('Ola Flutter')
+      body: Column(
+      children: <widget>[
+       Text(perguntas.elementAt(0)),
+],
+),
     ),
     );
   }
