@@ -3,9 +3,12 @@
 main() => runApp(PerguntasApp());
 
 class PerguntasApp extends StatelessWidget {
+
+final perguntaSelecionada = 0;
  
 void responder() {
-   print ('pergunta respondida')
+   perguntaSelecionada++; 
+   print ('pergunta respondida');
 }
 
 @override
@@ -26,7 +29,7 @@ void responder() {
        Text(perguntas[0]),
        RaisedButton(
          child:Text('Resposta 1'),
-          onPressed: ()=>print('resposta 1'),
+          onPressed: responder,
         ), 
        RaisedButton(
          child:Text('Resposta 2'),
