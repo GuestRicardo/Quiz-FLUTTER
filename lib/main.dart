@@ -1,14 +1,20 @@
 	import 'package:flutter/material.dart';
 
 main() => runApp(PerguntasApp());
-  final List<String>perguntas = [
+
+class PerguntasApp extends StatelessWidget {
+ 
+void responder() {
+   print ('pergunta respondida')
+}
+
+@override
+  Widget build(BuildContext context) {
+    
+    final List<String>perguntas = [
     'Qual é sua cor favorita',
     'Qual é seu animal de estimação',
 
-class PerguntasApp extends StatelessWidget {
-  const PerguntasApp({super.key});
-  @override
-  Widget build(BuildContext context) {
     return MaterialApp(
       darkTheme: ThemeData(),
       home: Scafffold(
@@ -20,15 +26,15 @@ class PerguntasApp extends StatelessWidget {
        Text(perguntas[0]),
        RaisedButton(
          child:Text('Resposta 1'),
-          onPressed: null,
+          onPressed: ()=>print('resposta 1'),
         ), 
        RaisedButton(
          child:Text('Resposta 2'),
-          onPressed: null,
+          onPressed: ()=>print('resposta 2'),
         ), 
        RaisedButton(
          child:Text('Resposta 3'),
-          onPressed: null,
+          onPressed: ()=>print('resposta 3'),
         ), 
 ],
 ),
