@@ -8,6 +8,7 @@ void main() {
 class PerguntaAppState extends State<PerguntaApp> {
   var perguntaSelecionada = 0;
 
+
   //metodo responsavel para incrementar as variaveis
   void responder() {
     setState(() {
@@ -51,6 +52,8 @@ class PerguntaAppState extends State<PerguntaApp> {
 }
 
 class PerguntaApp extends StatelessWidget {
+  const PerguntaApp({super.key});
+
   PerguntaAppState createState() {
     return PerguntaAppState();
   }
