@@ -10,7 +10,9 @@ class PerguntaAppState extends State<PerguntaApp> {
 
   //metodo responsavel para incrementar as variaveis
   void responder() {
-    perguntaSelecionada++;
+    setState(() {
+      perguntaSelecionada++;
+    });
     print(perguntaSelecionada);
   }
 
@@ -20,7 +22,7 @@ class PerguntaAppState extends State<PerguntaApp> {
       'Qual é a sua cor favorita?',
       'Qual é o seu animal favorito?',
     ];
-    
+
     return MaterialApp(
       title: 'Quiz App',
       theme: ThemeData(primarySwatch: Colors.blue),
@@ -49,8 +51,6 @@ class PerguntaAppState extends State<PerguntaApp> {
 }
 
 class PerguntaApp extends StatelessWidget {
-  const PerguntaApp({super.key});
-
   PerguntaAppState createState() {
     return PerguntaAppState();
   }
