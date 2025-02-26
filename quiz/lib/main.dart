@@ -5,16 +5,13 @@ void main() {
 }
 
 //classe para gerenciar o estado do app
-class PerguntaApp extends StatefulWidget {
-  @override
-  int perguntaSelecionada = 0;
+class PerguntaAppState extends State<PerguntaApp> {
+  var perguntaSelecionada = 0;
 
-  PerguntaApp({super.key});
-
- //metodo responsavel para incrementar as variaveis
+  //metodo responsavel para incrementar as variaveis
   void responder() {
     perguntaSelecionada++;
-    print('Perguta respondida!');
+    print(perguntaSelecionada);
   }
 
   @override
@@ -23,6 +20,7 @@ class PerguntaApp extends StatefulWidget {
       'Qual é a sua cor favorita?',
       'Qual é o seu animal favorito?',
     ];
+    
     return MaterialApp(
       title: 'Quiz App',
       theme: ThemeData(primarySwatch: Colors.blue),
@@ -52,4 +50,8 @@ class PerguntaApp extends StatefulWidget {
 
 class PerguntaApp extends StatelessWidget {
   const PerguntaApp({super.key});
+
+  PerguntaAppState createState() {
+    return PerguntaAppState();
+  }
 }
