@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './questao.dart';
 
 void main() => runApp(PerguntaApp());
 
@@ -24,11 +25,10 @@ class _PerguntaAppState extends State<PerguntaApp> {
 
     return MaterialApp(
       title: 'Quiz App',
-      theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
         appBar: AppBar(title: const Text('Quiz App')),
         body: Column(
-          children: [
+          children: <Widget>[
             Text(perguntas[_perguntaSelecionada]),
             ElevatedButton(
               onPressed: _responder,
@@ -50,7 +50,8 @@ class _PerguntaAppState extends State<PerguntaApp> {
 }
 
 class PerguntaApp extends StatelessWidget {
-  
+  const PerguntaApp({super.key});
+
   _PerguntaAppState createState() {
     return _PerguntaAppState();
   }
