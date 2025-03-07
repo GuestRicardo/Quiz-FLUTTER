@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import './questao.dart';
 
-void main() => runApp(PerguntaApp());
+void main() => runApp(Pergunta());
 
 //classe para gerenciar o estado do app
 class _PerguntaAppState extends State<PerguntaApp> {
@@ -49,8 +49,8 @@ class _PerguntaAppState extends State<PerguntaApp> {
   }
 }
 
-class PerguntaApp extends StatelessWidget {
-  const PerguntaApp({super.key});
+class Pergunta extends StatelessWidget {
+  const Pergunta({super.key});
 
   _PerguntaAppState createState() {
     return _PerguntaAppState();
