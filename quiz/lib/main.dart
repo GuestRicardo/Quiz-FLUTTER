@@ -29,7 +29,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
         appBar: AppBar(title: const Text('Quiz App')),
         body: Column(
           children: <Widget>[
-            Text(perguntas[_perguntaSelecionada]),
+            Questao(perguntas[_perguntaSelecionada]),
             ElevatedButton(
               onPressed: _responder,
               child: const Text('Resposta 1'),
