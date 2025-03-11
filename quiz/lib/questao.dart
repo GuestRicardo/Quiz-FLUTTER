@@ -7,12 +7,14 @@ class Questao extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      child: Text(
-        texto,
-        style: const TextStyle(fontSize: 28),
-        textAlign: TextAlign.center,
+    return Container(
+      child: SizedBox(
+        width: double.infinity,
+        child: Text(
+          texto,
+          style: const TextStyle(fontSize: 32),
+          textAlign: TextAlign.center,
+        ),
       ),
     );
   }
