@@ -7,10 +7,13 @@ class Resposta extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
+      style: ButtonStyle(
+        foregroundColor: WidgetStateProperty.all<Color>(
+          const Color.fromARGB(255, 0, 0, 0),
+        ),
+      ),
       onPressed: null,
-      
-      
-      child: Text(texto)
-      );
+      child: Text(texto),
+    );
   }
 }
