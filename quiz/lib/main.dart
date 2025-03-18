@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import './resultado.dart';
 import './questionario.dart';
-import './questao.dart';
-import './resposta.dart';
 
 void main() => runApp(const PerguntaApp());
 
