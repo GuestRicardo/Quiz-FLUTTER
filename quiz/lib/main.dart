@@ -41,7 +41,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
         body: Column(
           children: <Widget>[
             Questao(perguntas[_perguntaSelecionada]['texto'] as String),
-            ...widgets,
+            ...respostas.map((t) => Resposta(t, _responder)).toList(),
           ],
 
           //[
