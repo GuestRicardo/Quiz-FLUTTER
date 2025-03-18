@@ -22,10 +22,11 @@ class _PerguntaAppState extends State<PerguntaApp> {
   ];
 
   void _responder() {
-    setState(() {
-      _perguntaSelecionada++;
-    });
-    print(_perguntaSelecionada);
+    if (temPerguntaSelecionada) {
+      setState(() {
+        _perguntaSelecionada++;
+      });
+    }
   }
 
   bool get temPerguntaSelecionada {
