@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import './questao.dart';
 import './resposta.dart';
-import 'resultado.dart';
-import 'questionario.dart';
+import './resultado.dart';
+import './questionario.dart';
 
 void main() => runApp(const PerguntaApp());
 
@@ -31,14 +31,8 @@ class _PerguntaAppState extends State<PerguntaApp> {
     }
   }
 
-  bool get temPerguntaSelecionada {
-    return _perguntaSelecionada < _perguntas.length;
-  }
-
   @override
   Widget build(BuildContext context) {
-   
-
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('Perguntas')),
