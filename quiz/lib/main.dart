@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import './questao.dart';
-import './resposta.dart';
 import './resultado.dart';
 import './questionario.dart';
+import './questao.dart';
+import './resposta.dart';
 
 void main() => runApp(const PerguntaApp());
 
@@ -23,6 +23,10 @@ class _PerguntaAppState extends State<PerguntaApp> {
     },
   ];
 
+  bool get temPerguntaSelecionada {
+    return _perguntaSelecionada < _perguntas.length;
+  }
+
   void _responder() {
     if (temPerguntaSelecionada) {
       setState(() {
@@ -39,8 +43,8 @@ class _PerguntaAppState extends State<PerguntaApp> {
         body:
             temPerguntaSelecionada
                 ? Questionario(
-                  perguntaSelecionada: _perguntaSelecionada,
                   perguntas: _perguntas,
+                  perguntaSelecionada: _perguntaSelecionada,
                   quandoResponder: _responder,
                 )
                 : Resultado(),
